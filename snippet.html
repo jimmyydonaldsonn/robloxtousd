@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Robux To USD Converter</title>
+  </head>
+  <body>
+    <h1 class="main-heading">ROBUX TO USD Converter</h1>
+    <form class="converter">
+      <h2>Robux to USD Converter</h2>
+      <label for="type">
+        Select the type of calculator DevEX Of Purchase
+      </label>
+      <br />
+      <select name="type" id="type" onchange="calculateResult()">
+        <option selected disabled hidden>Select Value</option>
+        <option value="devex">DevEx Calculator for exchange Robux</option>
+        <option value="purchase">Purchase Calculator for Robux</option>
+      </select>
+      <br />
+      <br />
+      <label for="robux"> ROBUX in Your Roblox Account </label>
+      <br />
+      <input
+        type="number"
+        placeholder=""
+        id="robux"
+        name="robux"
+        min="0"
+        value="0"
+        oninput="calculateResult()"
+      />
+      <div>
+        <a href="#">Get Free Robux</a>
+      </div>
+    </form>
+    <div class="calculated-value">
+      Actual Value in USD $ <span class="result"></span>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
